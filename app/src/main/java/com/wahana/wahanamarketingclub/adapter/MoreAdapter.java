@@ -1,15 +1,19 @@
 package com.wahana.wahanamarketingclub.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.wahana.wahanamarketingclub.R;
-import com.wahana.wahanamarketingclub.activities.ActivityActivity;
 import com.wahana.wahanamarketingclub.fragments.MoreFragment;
 
 /**
@@ -18,65 +22,50 @@ import com.wahana.wahanamarketingclub.fragments.MoreFragment;
 
 public class MoreAdapter  extends BaseAdapter {
 
-    private Context ctx;
-    private Context context;
+    private Context mContext;
+    private final String[] text;
+    private final int[] images;
 
-    public MoreAdapter(Context c)
-    {
-        ctx=c;
+
+    public MoreAdapter(Context c, String[] text, int[] images) {
+        mContext = c;
+        this.text = text;
+        this.images = images;
     }
+
     @Override
     public int getCount() {
-        // TODO Auto-generated method stub
-        return pics.length;
+        return text.length;
     }
 
     @Override
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return 0;
     }
 
+    @SuppressLint("ResourceType")
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
-        ImageView iv;
-        if (convertView == null) {  // if it's not recycled, initialize some attributes
-            iv = new ImageView(ctx);
-            iv.setLayoutParams(new GridView.LayoutParams(195, 195));
-//            iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        View grid;
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        if(convertView == null){
+            grid = new View (mContext);
+            grid = inflater.inflate(R.layout.gridview_item, null);
+            TextView textView = (TextView) grid.findViewById(R.id.textView);
+            ImageView imageView = (ImageView)grid.findViewById(R.id.imageView);
+            textView.setText(text[position]);
+            imageView.setImageResource(images[position]);
         } else {
-            iv = (ImageView) convertView;
+            grid = (View) convertView;
         }
 
-//        switch (position) {
-//            case 0:
-//                Intent intent = new Intent(getActivity().getApplicationContext(), ActivityActivity.class);
-//                break;
-//        }
-        iv.setImageResource(pics[position]);
-        return iv;
-
+        return grid;
     }
-
-
-
-    private Integer[] pics={
-            R.drawable.activity,
-            R.drawable.event,
-            R.drawable.history,
-            R.drawable.quiz,
-            R.drawable.catalog,
-            R.drawable.reward,
-            R.drawable.report,
-            R.drawable.training,
-            R.drawable.survey
-    };
-
 }

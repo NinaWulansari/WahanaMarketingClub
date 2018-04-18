@@ -1,59 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!--Created by Nina-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/atasMore"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:background="@color/grey_top"
-        android:padding="10dp"
-        android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/avatar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:src="@color/black"/>
-
-        <TextView
-            android:id="@+id/nameProfile"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/atasMore"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nina Wulansari"
-            android:paddingLeft="7dp"
-            android:paddingTop="12dp"
-            android:paddingRight="15dp"
-            android:textSize="36px"/>
+            android:background="@color/white"
+            android:padding="12dp">
 
-        <ImageView
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/notif4" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/profile"/>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="rohmatul"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/statusProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="admin"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="6dp"
+            android:layout_height="72dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_notif" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@drawable/bottom_shadow"
-        android:layout_below="@+id/atasMore"/>
-
+        android:layout_below="@+id/topLayout"/>
 
     <GridView
-        android:layout_below="@+id/atasMore"
+        android:layout_below="@+id/topLayout"
         android:id="@+id/gridview"
+        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="200dp"
-        android:numColumns="3"
-        android:stretchMode="columnWidth"
+        android:columnWidth="110dp"
         android:gravity="center"
-        android:layout_marginTop="5dp"
-        />
+        android:numColumns="auto_fit">
+    </GridView>
 
 </RelativeLayout>

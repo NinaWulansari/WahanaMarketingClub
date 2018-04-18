@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingEnd="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/atasMore"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_search_black"/>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/child"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Rohmatul Laily"
+                    android:textSize="@dimen/cp_textsize_small"
+                    android:textColor="@color/grey_700"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/statusTextview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textSize="@dimen/cp_textsize_little"
+                    android:textStyle="bold"
+                    android:textColor="@color/red_900"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/custAlamatTextview"
+                    android:paddingBottom="@dimen/cp_padding_alamat"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/cp_textsize_little"
+                    android:text="Jalan Gunung Sahari No 20 Desa Sawah besar"
+                    android:textColor="@color/grey_700"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/red_900"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/custHpTextview"
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:textSize="@dimen/cp_textsize_little"
+                    android:layout_height="wrap_content"
+                    android:text="089123456789"
+                    android:textColor="@color/grey_700"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/red_900"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -43,12 +43,7 @@ public class BaseActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(title);
 
-
-
     }
-
-
-
 
 }
 

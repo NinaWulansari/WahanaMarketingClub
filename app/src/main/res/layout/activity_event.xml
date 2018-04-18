@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Created by Nina-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.wahana.wahanamarketingclub.activities.EventActivity">
+
+    <include
+        layout="@layout/app_bar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Event"
+        android:textColor="@color/gray"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+</RelativeLayout>

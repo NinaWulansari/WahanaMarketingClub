@@ -1,38 +1,61 @@
+/**
+ * Created by Nina
+ */
+
 package com.wahana.wahanamarketingclub.activities;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.wahana.wahanamarketingclub.R;
+import com.wahana.wahanamarketingclub.fragments.MoreFragmentCabang;
+import com.wahana.wahanamarketingclub.fragments.MoreFragmentMainDealer;
+import com.wahana.wahanamarketingclub.fragments.MoreFragmentSupervisor;
 import com.wahana.wahanamarketingclub.fragments.NewsFragment;
 import com.wahana.wahanamarketingclub.fragments.BaseFragment;
 import com.wahana.wahanamarketingclub.fragments.ChatFragment;
 import com.wahana.wahanamarketingclub.fragments.HomeFragment;
 import com.wahana.wahanamarketingclub.fragments.ProfileFragment;
 import com.wahana.wahanamarketingclub.fragments.MoreFragment;
+import com.wahana.wahanamarketingclub.model.LoginUser;
 import com.wahana.wahanamarketingclub.utils.FragmentHistory;
 import com.wahana.wahanamarketingclub.utils.Utils;
 import com.wahana.wahanamarketingclub.views.FragNavController;
 
+import java.util.Calendar;
+
 import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import id.co.ajsmsig.pointofsale.utils.DisplayUtil;
+
+import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF;
+import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF_KEY;
 
 public class MainActivity extends BaseActivity implements BaseFragment.FragmentNavigation, FragNavController.TransactionListener, FragNavController.RootFragmentListener {
-
-
     @BindView(R.id.content_frame)
     FrameLayout contentFrame;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+
+    @BindView(R.id.titleSearch)
+    TextView titleSearch;
 
     private int[] mTabIconsSelected = {
             R.drawable.ic_home,
@@ -56,14 +79,17 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         ButterKnife.bind(this);
 
-
         initToolbar();
-
         initTab();
+
+//        Calendar cal = Calendar.getInstance();
+//        cal.add( Calendar.SECOND, 1);
+//
+//        NotificationScheduler.Companion.setReminder(this, AlarmReceiver.class, "Lely","C",cal.getTime());
+
+        Toast.makeText(this, DisplayUtil.INSTANCE.getScreenSize(), Toast.LENGTH_SHORT).show();
 
         fragmentHistory = new FragmentHistory();
 
@@ -72,19 +98,13 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
                 .transactionListener(this)
                 .rootFragmentListener(this, TABS.length)
                 .build();
-
-
         switchTab(0);
 
         bottomTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-
                 fragmentHistory.push(tab.getPosition());
-
                 switchTab(tab.getPosition());
-
-
             }
 
             @Override
@@ -96,19 +116,13 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             public void onTabReselected(TabLayout.Tab tab) {
 
                 mNavController.clearStack();
-
                 switchTab(tab.getPosition());
-
-
             }
         });
-
     }
 
     private void initToolbar() {
         setSupportActionBar(toolbar);
-
-
     }
 
     private void initTab() {
@@ -121,7 +135,6 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             }
         }
     }
-
 
     private View getTabView(int position) {
         View view = LayoutInflater.from(MainActivity.this).inflate(R.layout.tab_item_bottom, null);
@@ -145,8 +158,6 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
     private void switchTab(int position) {
         mNavController.switchTab(position);
-
-
 //        updateToolbarTitle(position);
     }
 
@@ -162,20 +173,33 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
         super.onPause();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+        int id = item.getItemId();
+        if (id == R.id.action_aboutUs){
+            Intent intent = new Intent(getApplicationContext(),AboutUs.class);
+            startActivity(intent);
+            return true;
+        } else if (id==R.id.action_logout){
+            SharedPreferences preferences = getSharedPreferences(MY_LOGIN_PREF, Context.MODE_PRIVATE);
+            preferences.edit().remove(MY_LOGIN_PREF_KEY).apply();
+            Intent i = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(i);
+            finish();
+        }
+
         switch (item.getItemId()) {
-
-
             case android.R.id.home:
-
-
                 onBackPressed();
                 return true;
         }
-
 
         return super.onOptionsItemSelected(item);
 
@@ -183,37 +207,8 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
     @Override
     public void onBackPressed() {
-
-        if (!mNavController.isRootFragment()) {
-            mNavController.popFragment();
-        } else {
-
-            if (fragmentHistory.isEmpty()) {
-                super.onBackPressed();
-            } else {
-
-
-                if (fragmentHistory.getStackSize() > 1) {
-
-                    int position = fragmentHistory.popPrevious();
-
-                    switchTab(position);
-
-                    updateTabSelection(position);
-
-                } else {
-
-                    switchTab(0);
-
-                    updateTabSelection(0);
-
-                    fragmentHistory.emptyStack();
-                }
-            }
-
-        }
+        finish();
     }
-
 
     private void updateTabSelection(int currentTab){
 
@@ -242,13 +237,10 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
         }
     }
 
-
     @Override
     public void onTabTransaction(Fragment fragment, int index) {
         // If we have a backstack, show the back button
         if (getSupportActionBar() != null && mNavController != null) {
-
-
             updateToolbar();
 
         }
@@ -285,26 +277,25 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             case FragNavController.TAB4:
                 return new ProfileFragment();
             case FragNavController.TAB5:
-                return new MoreFragment();
-
-
+                LoginUser savedUser = new Gson().fromJson(MainActivity
+                        .this.getSharedPreferences(MY_LOGIN_PREF, Context.MODE_PRIVATE).getString(MY_LOGIN_PREF_KEY, ""), LoginUser.class);
+                String name = savedUser.getTitle();
+                if(name.equals("Admin Dealer")){
+                    return new MoreFragmentCabang();
+                }else if(name.equals("Admin Main Dealer")){
+                    return new MoreFragmentMainDealer();
+                }else if(name.equals("Supervisor")){
+                    return new MoreFragmentSupervisor();
+                }else if(name.equals("Salesman")) {
+                    return new MoreFragment();
+                }
         }
         throw new IllegalStateException("Need to send an index that we know");
     }
 
-
-//    private void updateToolbarTitle(int position){
-//
-//
-//        getSupportActionBar().setTitle(TABS[position]);
-//
-//    }
-
-
     public void updateToolbarTitle(String title) {
-
-
-        getSupportActionBar().setTitle(title);
+        titleSearch.setText(title);
+        titleSearch.setTextColor(Color.WHITE);
 
     }
 

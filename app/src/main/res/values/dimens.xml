@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_width">80dp</dimen>
+    <dimen name="profile_height">80dp</dimen>
+    <dimen name="padding">10dp</dimen>
+        <dimen name="design_fab_size_mini" tools:override="true">24dp</dimen>
+        <dimen name="design_fab_content_size" tools:override="true">48dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+
+
+    <!--customer prospect-->
+    <dimen name="textsize_big">20sp</dimen>
+    <dimen name="textsize_medium">14sp</dimen>
+    <dimen name="textsize_small">12sp</dimen>
+    <dimen name="alp_size">40</dimen>
+    <dimen name="padding_alamat">5dp</dimen>
+    <dimen name="padding_lovsearch">4dp</dimen>
+    <dimen name="padding_edittext">10dp</dimen>
+    <dimen name="margin_form">15dp</dimen>
+    <dimen name="spinner_high">40dp</dimen>
+    <dimen name="margin_top_edittext">5dp</dimen>
+    <dimen name="width_0">0dp</dimen>
+    <dimen name="relative_margin">20dp</dimen>
+
+</resources>

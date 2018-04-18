@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_nama"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                >
+
+                <EditText
+                    android:id="@+id/cust_nama"
+                    android:layout_width="@dimen/cp_width_0"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                    android:background="@drawable/edittext_bg"
+                    android:textColor="@color/black_1000"
+                    android:textSize="@dimen/cp_textsize_medium"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/cp_padding_edittext" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_hp"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_hp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:inputType="number"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_hp_wa"
+                android:textSize="@dimen/cp_textsize_small"/>
+
+            <EditText
+                android:id="@+id/cust_hp_wa"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:inputType="number"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_alamat"
+                android:textSize="@dimen/cp_textsize_small"/>
+
+            <EditText
+                android:id="@+id/cust_alamat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:inputType="textCapCharacters"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_rt"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_rt"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_rw"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_rw"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/pos_code"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                >
+
+                <EditText
+                    android:id="@+id/kodePosEditText"
+                    android:layout_width="@dimen/cp_width_0"
+                    android:enabled="false"
+                    android:layout_weight="0.8"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                    android:background="@drawable/edittext_bg"
+                    android:textColor="@color/black_1000"
+                    android:textSize="@dimen/cp_textsize_medium"
+                    android:padding="@dimen/cp_padding_edittext" />
+
+                <Button
+                    android:id="@+id/btnKodePos"
+                    android:layout_width="@dimen/cp_width_0"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:text="Choose"
+                    android:textSize="@dimen/cp_textsize_little"
+                    android:textColor="@color/white"
+                    android:background="@drawable/selector_button"
+                    android:onClick="getMasterKodePos"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/pos_lurah"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/kelurahanEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/pos_camat"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/kecamatanEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/pos_kota"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/kotaEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/pos_propinsi"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/provinsiEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/kota_id"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/idKotaEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/propinsi_id"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/idProvinsiEditText"
+                android:enabled="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_email"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_email"
+                android:inputType="textEmailAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_kelamin"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnJenisKelamin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_tgl_lahir"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_tanggal_lahir"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_agama"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnReligion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/kerja_kode"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_npwp"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_npwp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_jenis"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnJenisCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tx_cust_pic"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_pic"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_pic"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_type"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:background="@drawable/edittext_bg"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnTypeCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cp_spinner_high"
+                    android:padding="@dimen/cp_padding_edittext"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_noktp"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_noktp"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_telp_rumah"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_telp_rumah"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_telp_kantor"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_telp_kantor"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/cust_fax"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/cust_fax"
+                android:inputType="number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/doc_1"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/doc_1"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:hint="@string/hint_choose_file"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/doc_2"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/doc_2"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:hint="@string/hint_choose_file"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/doc_3"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/doc_3"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:hint="@string/hint_choose_file"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/doc_4"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/doc_4"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:hint="@string/hint_choose_file"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_form"
+                android:textColor="@color/grey_700"
+                android:text="@string/doc_5"
+                android:textSize="@dimen/cp_textsize_small" />
+
+            <EditText
+                android:id="@+id/doc_5"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form"
+                android:layout_marginTop="@dimen/cp_margin_top_edittext"
+                android:hint="@string/hint_choose_file"
+                android:background="@drawable/edittext_bg"
+                android:textColor="@color/black_1000"
+                android:textSize="@dimen/cp_textsize_medium"
+                android:padding="@dimen/cp_padding_edittext" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/cp_relative_margin"
+                android:layout_marginBottom="@dimen/cp_relative_margin"
+                android:layout_marginLeft="@dimen/cp_margin_form"
+                android:layout_marginRight="@dimen/cp_margin_form">
+
+                <Button
+                    android:id="@+id/btnCustomerProspectUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/cp_textsize_small"
+                    android:background="@drawable/selector_button"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"/>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,19 +1,269 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="wrap_content">
 
-
-
-    <TextView
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile Fragment"
-        android:textSize="25sp"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_photo"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="2dp"
+                    android:padding="20dp"
+                    android:clickable="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile" />
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    app:backgroundTint="#d8ededed"
+                    app:fabSize="mini"
+                    android:src="@drawable/ic_photo_camera_white_36dp"
+                    android:layout_alignBottom="@+id/user_profile_photo"
+                    android:layout_alignRight="@+id/user_profile_photo"
+                    android:layout_alignEnd="@+id/user_profile_photo"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginRight="24dp"
+                    android:id="@+id/user_camera_floating_button" />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/header_cover_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/user_edit_button"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginEnd="17dp"
+                            android:layout_marginRight="17dp"
+                            android:layout_marginTop="20dp"
+                            android:clickable="true"
+                            android:padding="2dp"
+                            android:background="@drawable/square_background"
+                            android:src="@drawable/ic_mode_edit_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/label1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1000"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/username"/>
+
+                        <TextView
+                            android:id="@+id/textView_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="-" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/label2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/black_1000" />
+
+                        <TextView
+                            android:id="@+id/textView_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="-" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lebel3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1000"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/email"/>
+
+                        <TextView
+                            android:id="@+id/textView_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="-" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lebel4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1000"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/birth"/>
+
+                        <TextView
+                            android:id="@+id/textView_birth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="-"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/lebel5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1000"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/gender"/>
+
+                        <TextView
+                            android:id="@+id/textView_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="-"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/label6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1000"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="@string/branch"/>
+
+                        <TextView
+                            android:id="@+id/textView_branch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorPureWhite"
+                            android:padding="15dp"
+                            android:text="Wahana Makmur Sehari" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView_display_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_camera_floating_button"
+                    android:layout_centerHorizontal="true"
+                    android:text="Anggi Lisdayanti"
+                    android:textColor="@color/colorPureWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_display_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:text="Sales Marketing"
+                    android:textColor="@color/colorPureWhite"
+                    android:textSize="14sp" />
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>
+
+    <!--Created by Anggi-->

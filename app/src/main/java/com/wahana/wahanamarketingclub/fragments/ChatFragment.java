@@ -13,10 +13,11 @@ import com.wahana.wahanamarketingclub.activities.MainActivity;
 
 import butterknife.ButterKnife;
 
+/**
+ * Created by Nina
+ */
 
 public class ChatFragment extends BaseFragment{
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,6 @@ public class ChatFragment extends BaseFragment{
         ButterKnife.bind(this, view);
 
         ( (MainActivity)getActivity()).updateToolbarTitle("Chat");
-
 
         return view;
     }

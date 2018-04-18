@@ -1,0 +1,185 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/margin_form"
+    >
+    <include
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/cp_padding_edittext"
+            android:paddingTop="@dimen/cp_padding_edittext">
+
+            <RelativeLayout
+                android:id="@+id/atasMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/line"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="@dimen/cp_padding_edittext"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey_700"
+                            android:text="Kode"
+                            android:textSize="@dimen/cp_textsize_small" />
+
+                        <TextView
+                            android:id="@+id/custCode"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="CP-000001"
+                            android:textColor="@color/black_1000"
+                            android:textSize="@dimen/cp_textsize_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_700"
+                        android:text="Nama"
+                        android:textSize="@dimen/cp_textsize_small" />
+
+                        <TextView
+                            android:id="@+id/child"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Rohmatul Laily"
+                            android:textColor="@color/black_1000"
+                            android:textSize="@dimen/cp_textsize_medium"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_700"
+                        android:text="Alamat"
+                        android:textSize="@dimen/cp_textsize_small" />
+
+                        <TextView
+                            android:id="@+id/custAlamatTextview"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="Jalan Gunung Sahari No 20 Desa Sawah besar"
+                            android:textColor="@color/black_1000"
+                            android:textSize="@dimen/cp_textsize_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey_700"
+                        android:text="Handphone"
+                        android:textSize="@dimen/cp_textsize_small" />
+
+                        <TextView
+                            android:id="@+id/custHpTextview"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content"
+                            android:text="081333168766"
+                            android:textColor="@color/black_1000"
+                            android:textSize="@dimen/cp_textsize_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="@dimen/cp_padding_edittext"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/cp_padding_tab_detail"
+        android:layout_marginRight="@dimen/cp_padding_tab_detail">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />v
+    </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_marginLeft="@dimen/cp_padding_tab_detail"
+            android:layout_marginRight="@dimen/cp_padding_tab_detail"
+            android:paddingBottom="@dimen/cp_padding_edittext"
+            android:background="@drawable/bg_input_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+
+</LinearLayout>

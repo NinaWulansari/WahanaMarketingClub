@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--created by : Ratri-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wahana.wahanamarketingclub.activities.AboutUs">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_tab">
+        <include
+            layout="@layout/toolbar"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/layout_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ImageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/simbol"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/logo2"
+                android:elevation="5dp"
+                android:padding="20dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="170dp"
+                android:layout_centerHorizontal="true"/>
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey"
+                android:elevation="4dp"
+                android:paddingBottom="24dp"
+                android:layout_below="@+id/ImageTitle"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/text_title_aboutUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="35dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <WebView
+                    android:id="@+id/text_content_aboutUs"
+                    android:layout_below="@+id/text_title_aboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:padding="16dp"
+                    android:scrollbars="none"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
