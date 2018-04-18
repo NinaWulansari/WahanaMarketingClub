@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.wahana.wahanamarketingclub.R;
+import com.wahana.wahanamarketingclub.activities.ActivityDetailActivity;
 import com.wahana.wahanamarketingclub.model.ActivitySalesmenIndex;
 
 import java.text.DateFormat;
@@ -16,6 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.TimeZone;
+
+import butterknife.OnClick;
 
 /**
  * Created by Nina on 4/9/2018.

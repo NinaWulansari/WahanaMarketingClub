@@ -1,6 +1,7 @@
 package com.wahana.wahanamarketingclub.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,15 +17,19 @@ import android.widget.Toolbar;
 
 import com.google.gson.Gson;
 import com.wahana.wahanamarketingclub.R;
+import com.wahana.wahanamarketingclub.activities.ActivityDetailActivity;
+import com.wahana.wahanamarketingclub.activities.EditProfileActivity;
 import com.wahana.wahanamarketingclub.adapter.ActivitySalesmenAdapter;
 import com.wahana.wahanamarketingclub.connect.API;
 import com.wahana.wahanamarketingclub.model.ActivitySalesmenIndex;
 import com.wahana.wahanamarketingclub.model.LoginUser;
+import com.wahana.wahanamarketingclub.utils.RecyclerItemClickListener;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -32,7 +37,7 @@ import retrofit2.Response;
 import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF;
 import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF_KEY;
 
-public class ThreeFragment extends Fragment {
+public class DoingFragment extends Fragment {
 
     @BindView(R.id.simple_recycler)
     RecyclerView recyclerView;
@@ -41,16 +46,25 @@ public class ThreeFragment extends Fragment {
     public ArrayList<ActivitySalesmenIndex> data;
     public ArrayList<ActivitySalesmenIndex> tempData;
 
-    public static ThreeFragment newInstance(){
-        return new ThreeFragment();
+    public static final String DATA_ACTIVITY = "activity";
+
+    public static DoingFragment newInstance(){
+        return new DoingFragment();
     }
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_doing, container, false);
         ButterKnife.bind(this, rootView);
         getData();
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getActivity(),ActivityDetailActivity.class);
+                intent.putExtra(DATA_ACTIVITY, tempData.get(position).getId());
+                startActivity(intent);
+            }
+        }));
         return rootView;
     }
 
@@ -61,7 +75,7 @@ public class ThreeFragment extends Fragment {
                         .getString(MY_LOGIN_PREF_KEY, ""), LoginUser.class);
 
         String id = savedUser.getSalesmanId();
-        API.getActivityTomorrow(id).enqueue(new Callback<ArrayList<ActivitySalesmenIndex>>() {
+        API.getActivityToday(id).enqueue(new Callback<ArrayList<ActivitySalesmenIndex>>() {
             @Override
             public void onResponse(Call<ArrayList<ActivitySalesmenIndex>> call, Response<ArrayList<ActivitySalesmenIndex>> response) {
                 Log.i("bebet tanjung", "onResponse: "+response.body());
@@ -82,5 +96,4 @@ public class ThreeFragment extends Fragment {
             }
         });
     }
-
 }

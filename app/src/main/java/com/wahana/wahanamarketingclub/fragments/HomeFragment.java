@@ -108,7 +108,7 @@ public class HomeFragment extends BaseFragment{
         return view;
     }
 
-    public class PagerAdapter extends FragmentStatePagerAdapter {
+    public static class PagerAdapter extends FragmentStatePagerAdapter {
         int mNumOfTabs;
 
         public PagerAdapter(FragmentManager fm,int NumOfTabs) {

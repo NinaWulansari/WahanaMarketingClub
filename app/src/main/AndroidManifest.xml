@@ -27,6 +27,7 @@
         <activity android:name=".activities.QuizActivity" />
         <activity android:name=".activities.RewardActivity" />
         <activity android:name=".activities.ActivitySalesmanAddActivity"/>
+        <activity android:name=".activities.ActivityDetailActivity"/>
         <activity android:name=".activities.TrainingScheduleActivity" />
         <activity android:name=".activities.ReportActivity" />
         <activity android:name=".activities.SurveyActivity" />

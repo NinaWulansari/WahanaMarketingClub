@@ -54,10 +54,10 @@ import retrofit2.http.Query;
 public class API {
 
     static Retrofit retrofit;
-//    public static String baseURL ="http://192.168.18.226:8080/";
-//    public static String baseURLPicasso ="http://192.168.18.226:8080";
-    public static String baseURL ="http://192.168.0.101:8080/";
-    public static String baseURLPicasso ="http://192.168.0.101:8080";
+    public static String baseURL ="http://192.168.18.226:8080/";
+    public static String baseURLPicasso ="http://192.168.18.226:8080";
+//    public static String baseURL ="http://192.168.0.101:8080/";
+//    public static String baseURLPicasso ="http://192.168.0.101:8080";
 
     public static Retrofit getInstance() {
         if (retrofit == null) {
@@ -223,6 +223,16 @@ public class API {
         return service.insertActivity(activitySalesmenAdd);
     }
 
+    public static Call<ArrayList<ActivitySalesmenIndex>> getActivityToday(String id) {
+        WmcService service = getInstance().create(WmcService.class);
+        return service.getActivityToday(id);
+    }
+
+    public static Call<ArrayList<ActivitySalesmenIndex>> getActivityTomorrow(String id) {
+        WmcService service = getInstance().create(WmcService.class);
+        return service.getActivityTomorrow(id);
+    }
+
     public interface WmcService {
 
         @POST("api_login")
@@ -284,6 +294,11 @@ public class API {
         @POST("api_master_activity")
         Call<String> insertActivity(@Body ActivitySalesmenAdd activitySalesmenAdd);
 
+        @GET("api_master_activity_today")
+        Call<ArrayList<ActivitySalesmenIndex>> getActivityToday(@Query("salesman_id") String id);
+
+        @GET("api_master_activity_tomorrow")
+        Call<ArrayList<ActivitySalesmenIndex>> getActivityTomorrow(@Query("salesman_id") String id);
     }
 }
 

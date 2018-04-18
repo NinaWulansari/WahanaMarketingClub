@@ -32,7 +32,7 @@ import retrofit2.Response;
 import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF;
 import static com.wahana.wahanamarketingclub.activities.LoginActivity.MY_LOGIN_PREF_KEY;
 
-public class ThreeFragment extends Fragment {
+public class TodoFragment extends Fragment {
 
     @BindView(R.id.simple_recycler)
     RecyclerView recyclerView;
@@ -41,11 +41,11 @@ public class ThreeFragment extends Fragment {
     public ArrayList<ActivitySalesmenIndex> data;
     public ArrayList<ActivitySalesmenIndex> tempData;
 
-    public static ThreeFragment newInstance(){
-        return new ThreeFragment();
+    public static TodoFragment newInstance(){
+        return new TodoFragment();
     }
 
-    @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_doing, container, false);
@@ -82,5 +82,4 @@ public class ThreeFragment extends Fragment {
             }
         });
     }
-
 }
